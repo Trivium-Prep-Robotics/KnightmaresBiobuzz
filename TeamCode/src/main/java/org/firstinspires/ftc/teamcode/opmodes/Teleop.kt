@@ -19,11 +19,11 @@ class Teleop(robot: Robot) : NextOpMode(robot, BulkReadHook) {
         )
 
         operator.rightTrigger.isOver(0.2)
-            .toggleOnTrue(robot.intake.startIntake)
-            .toggleOnFalse(robot.intake.stopIntake)
+            .toggleOnTrue(robot.intake.start)
+            .toggleOnFalse(robot.intake.stop)
 
         operator.y
-            .toggleOnTrue(robot.intake.reverseIntake)
-            .toggleOnFalse(robot.intake.stopIntake)
+            .toggleOnTrue(robot.intake.reverse)
+            .toggleOnFalse(robot.intake.stop)
     }
 }
