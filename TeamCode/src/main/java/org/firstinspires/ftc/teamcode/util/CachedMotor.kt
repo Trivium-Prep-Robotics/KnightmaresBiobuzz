@@ -14,8 +14,8 @@ class CachedMotor(
     fun setThrottle(throttle: Double) {
         val corrected = throttle.coerceIn(-1.0..1.0)
         if (abs(corrected - cachedThrottle) >= cachingTolerance || (corrected == 0.0 && cachedThrottle != 0.0) || (corrected >= 1.0 && !(cachedThrottle >= 1.0)) || (corrected <= -1.0 && !(cachedThrottle <= -1.0)) || cachedThrottle.isNaN()) {
-            cachedThrottle = throttle
-            motor.throttle = throttle
+            cachedThrottle = corrected
+            motor.throttle = corrected
         }
     }
 }
