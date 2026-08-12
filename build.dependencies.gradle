@@ -22,5 +22,6 @@ dependencies {
     implementation 'dev.nextftc.v2:hardware:0.1.0'
     implementation 'dev.nextftc.v2:robot:0.1.0'
     implementation "com.bylazar:fullpanels:1.0.12"
+    implementation("dev.frozenmilk.sinister:Sloth:0.2.4")
 }
 
