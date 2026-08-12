@@ -5,8 +5,9 @@ import dev.nextftc.robot.opmode.NextTeleop
 import dev.nextftc.robot.triggers.CommandGamepad
 import dev.nextftc.robot.triggers.Trigger
 import org.firstinspires.ftc.teamcode.Robot
+import dev.nextftc.robot.opmode.BulkReadHook
 @NextTeleop
-class Teleop(robot: Robot) : NextOpMode(robot) {
+class Teleop(robot: Robot) : NextOpMode(robot, BulkReadHook) {
     init {
         val driver = CommandGamepad(Trigger.defaultEventLoop, gamepad1)
         val operator = CommandGamepad(Trigger.defaultEventLoop, gamepad2)
