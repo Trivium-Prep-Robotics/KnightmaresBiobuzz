@@ -21,4 +21,9 @@ class Robot : NextRobot {
         PhotonCore.experimental.setMaximumParallelCommands(8) // Can be adjusted based on user preference - but raising this number further can cause issues
         PhotonCore.enable()
     }
+
+    fun clearCaches() {
+        PhotonCore.CONTROL_HUB.clearBulkCache()
+        PhotonCore.EXPANSION_HUB.clearBulkCache()
+    }
 }

@@ -39,5 +39,6 @@ class Teleop(robot: Robot) : NextOpMode(robot, BulkReadHook) {
             .toggleOnFalse(robot.intake.stop)
 
         driver.rightBumper.toggleOnTrue(Commands.instant {slowmode = !slowmode})
+        robot.clearCaches()
     }
 }
