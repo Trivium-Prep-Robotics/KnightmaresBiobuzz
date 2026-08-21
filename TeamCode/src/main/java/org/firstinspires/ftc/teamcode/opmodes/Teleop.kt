@@ -19,7 +19,7 @@ class Teleop(robot: Robot) : NextOpMode(robot, BulkReadHook) {
         controlhub = hardwareMap.get(LynxModule::class.java, "Control Hub")
         controlhub!!.setBulkCachingMode(LynxModule.BulkCachingMode.MANUAL)
         controlhub!!.clearBulkCache()
-        expansionhub = hardwareMap.get(LynxModule::class.java, "Expansion Hub")
+        expansionhub = hardwareMap.get(LynxModule::class.java, "Expansion Hub 2")
         expansionhub!!.setBulkCachingMode(LynxModule.BulkCachingMode.MANUAL)
         expansionhub!!.clearBulkCache()
 

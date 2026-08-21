@@ -5,7 +5,6 @@ import dev.nextftc.robot.NextRobot
 import org.firstinspires.ftc.teamcode.mechanisms.Drivetrain
 import org.firstinspires.ftc.teamcode.mechanisms.Intake
 import dev.nextftc.robot.Mechanism
-//import com.seattlesolvers.solverslib.photon.PhotonCore
 
 class Robot : NextRobot {
     val intake = Intake()
